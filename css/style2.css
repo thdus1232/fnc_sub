@@ -1,0 +1,262 @@
+/* @font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+} */
+body{
+    font-family: 'SUITE', sans-serif;
+    width: 100%;
+}
+.inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+#header{
+    position: fixed;
+    top: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 100px;
+    background-color: #1d1d1d;
+    z-index: 50;
+}
+
+.header{
+    display: flex;
+    
+}
+
+/* nav start */
+.logo{
+    padding-left: 30px;
+    padding-top: 15px;
+}
+
+.nav>ul{
+    display: flex;
+    width: 954px;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.nav>ul>li>a{
+    display: inline-block;
+    padding: 20px;
+    padding-right: 60px;
+    font-size: 21px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 2.7;
+    
+}
+.nav>ul>li>a:hover{
+    color: #3d3d3d;
+}
+.nav>ul>li>a.active{
+    color: #ec2c1d;
+}
+.nav>ul>li>ul>li>a.active{
+    color: #ec2c1d;
+    font-weight: 800;
+}
+.nav>ul>li>ul>li>a:hover{
+    font-weight: 700;
+}
+.nav>ul>li>ul{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 78px; left: 115px;
+    display: none;
+}
+.nav>ul>li>ul.active{display: block;}
+.nav>ul>li>ul>li{
+    display: inline-block;
+}
+.nav>ul>li>ul>li>a{
+    width: 100%;
+    display: inline-block;
+    padding: 40px;
+}
+
+/* sub end */
+#main{
+    background-color: #f0f0f0;
+}
+.box{
+    width: 1200px;height: 996px;
+    display: flex;
+    justify-content: space-between;
+    /* margin-top: 230px; */
+    margin-top: 154px;
+    padding-top: 50px;
+}
+#photo{
+    width: 534px;height: 800px;
+    position: relative;
+    padding-top: 20px;
+}
+#photo::before{
+    content: url(../images/Sign.png);
+    position: absolute;
+    bottom: -30px;
+    left: 300px;
+    width: 296px;height: 169px;
+    z-index: 50;
+}
+#photo>ul{
+    width: 534px;
+    position: relative;
+}
+#photo>ul>li{
+    position: absolute;top: 0;left: 0;
+}
+
+
+/* profile start */
+#profile{
+    width: 590px;
+}
+#txt{
+    width: 286px;
+    margin: 0 auto;
+    margin-bottom: 49px;
+}
+#txt>p{
+    text-align: center;
+}
+h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    padding-bottom: 20px;
+}
+#icon{
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+    margin: 0 auto;
+}
+#filmo{
+    width: 590px;
+    height: auto;
+}
+/* 아코디언으로 입력중 */
+input[id*="answer"]{
+    display: none;
+}
+input[id*="answer"] + label{
+    display: block;padding: 15px;
+    padding-left: 24px;
+    width: 490px;
+    margin: 0 auto;
+    border-bottom: 2px solid #777777;
+    font-size: 24px;
+    font-weight: 600;
+    background: #d2d2d2;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 5px;
+}
+input[id*="answer"] + label em{
+    position: absolute;
+    top: 50%;right: 10px;
+    width: 30px;height: 30px;margin-top: -15px;
+    display: inline-block;
+    background: url(../images/arr.png) 0 0 no-repeat;
+
+}
+
+input[id*="answer"] + label + div {
+    max-height: 0;
+    transition: all .35s;
+    overflow: hidden;
+    width: 490px;
+    margin: 0 auto;
+}
+input[id*="answer"] + label + div ul li{
+    padding-bottom: 22px;
+    
+}
+input[id*="answer"] + label + div ul li:first-child{
+    padding-top: 22px;
+}
+input[id*="answer"] + label + div ul li span{
+    padding-left: 60px;
+}
+
+input[id*="answer"]:checked + label + div{
+    max-height: 516px;
+}
+input[id*="answer"]:checked + label em{
+    background-position: 0 -30px;
+}
+
+/* 밑에는 아코디언으로 수정전 css */
+/* #filmo>ul{
+    width: 490px;
+    margin: 0 auto;
+}
+#filmo>ul>li{
+}
+#filmo>ul>li>a{
+    display: block;
+    padding: 15px;
+    padding-left: 35px;
+    background-color: #d2d2d2;
+    font-size: 24px;
+    font-weight: 500;
+    border-bottom: 2px solid #777777;
+}
+#filmo>ul>li>ul{
+    padding-top: 22px;
+}
+#filmo>ul>li>ul>li{
+    padding-bottom: 22px;
+    padding-left: 35px;
+}
+#filmo>ul>li>ul>li>span{
+    
+    padding-right: 60px;
+} */
+
+/* footer start */
+#footer{
+    height: 200px;
+    background-color: #1d1d1d;
+}
+.footer{
+    color: #868686;
+    display: flex;
+    padding-top: 60px;
+}
+.footer>img{
+    margin: 10px 45px 10px 45px;
+    
+}
+.line{
+    padding-left: 200px;
+}
+.line>ul{
+    display: flex;
+    padding-bottom: 18px;
+}
+.line>p{
+    padding-top: 18px;
+}
+.line>ul>li>a{
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.line>ul>li>a:first-child{
+    padding-left: 0;
+}
+.line>ul>li::after{
+    content: '|';
+}
+.line>ul>li:last-child::after{
+    content: '';
+}
