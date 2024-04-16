@@ -1,9 +1,4 @@
-/* @font-face {
-    font-family: 'SUITE-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-} */
+@charset "utf-8";
 body{
     font-family: 'SUITE', sans-serif;
     width: 100%;
@@ -21,18 +16,13 @@ body{
     background-color: #1d1d1d;
     z-index: 50;
 }
-
-.header{
-    display: flex;
-    
-}
+.header{display: flex;}
 
 /* nav start */
 .logo{
     padding-left: 30px;
     padding-top: 15px;
 }
-
 .nav>ul{
     display: flex;
     width: 954px;
@@ -40,7 +30,6 @@ body{
     position: relative;
     text-align: center;
 }
-
 .nav>ul>li>a{
     display: inline-block;
     padding: 20px;
@@ -49,21 +38,10 @@ body{
     font-weight: 500;
     color: #fff;
     line-height: 2.7;
-    
 }
-.nav>ul>li>a:hover{
-    color: #3d3d3d;
-}
-.nav>ul>li>a.active{
-    color: #ec2c1d;
-}
-.nav>ul>li>ul>li>a.active{
-    color: #ec2c1d;
-    font-weight: 800;
-}
-.nav>ul>li>ul>li>a:hover{
-    font-weight: 700;
-}
+.nav>ul>li>a:hover{color: #3d3d3d;}
+.nav>ul>li>a.active{color: #ec2c1d;}
+
 .nav>ul>li>ul{
     display: flex;
     justify-content: space-between;
@@ -72,16 +50,32 @@ body{
     display: none;
 }
 .nav>ul>li>ul.active{display: block;}
-.nav>ul>li>ul>li{
-    display: inline-block;
-}
+.nav>ul>li>ul>li{display: inline-block;}
 .nav>ul>li>ul>li>a{
     width: 100%;
     display: inline-block;
     padding: 40px;
 }
 
+.nav>ul>li>ul>li>a.active{
+    color: #ec2c1d;
+    font-weight: 800;
+    display: block;
+}
+.sub.on{display: block;}
+
+.nav>ul>li>ul>li>a:hover{ font-weight: 700;}
+.header::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 54px;
+    background-color: #fff;
+    position: absolute;top: 100px;left: 0;
+    z-index: -1;
+}
 /* sub end */
+
 #main{
     background-color: #f0f0f0;
 }
@@ -114,19 +108,14 @@ body{
     position: absolute;top: 0;left: 0;
 }
 
-
 /* profile start */
-#profile{
-    width: 590px;
-}
+#profile{width: 590px;}
 #txt{
     width: 286px;
     margin: 0 auto;
     margin-bottom: 49px;
 }
-#txt>p{
-    text-align: center;
-}
+#txt>p{text-align: center;}
 h2{
     text-align: center;
     font-size: 40px;
@@ -144,7 +133,7 @@ h2{
     width: 590px;
     height: auto;
 }
-/* 아코디언으로 입력중 */
+/* 아코디언으로 입력 */
 input[id*="answer"]{
     display: none;
 }
@@ -167,25 +156,24 @@ input[id*="answer"] + label em{
     width: 30px;height: 30px;margin-top: -15px;
     display: inline-block;
     background: url(../images/arr.png) 0 0 no-repeat;
-
 }
-
 input[id*="answer"] + label + div {
     max-height: 0;
     transition: all .35s;
     overflow: hidden;
-    width: 490px;
+    width: 445px;
     margin: 0 auto;
 }
 input[id*="answer"] + label + div ul li{
     padding-bottom: 22px;
-    
 }
 input[id*="answer"] + label + div ul li:first-child{
     padding-top: 22px;
 }
 input[id*="answer"] + label + div ul li span{
-    padding-left: 60px;
+    padding-right: 60px;
+    width: 50px;
+    display: inline-block;
 }
 
 input[id*="answer"]:checked + label + div{
@@ -194,34 +182,6 @@ input[id*="answer"]:checked + label + div{
 input[id*="answer"]:checked + label em{
     background-position: 0 -30px;
 }
-
-/* 밑에는 아코디언으로 수정전 css */
-/* #filmo>ul{
-    width: 490px;
-    margin: 0 auto;
-}
-#filmo>ul>li{
-}
-#filmo>ul>li>a{
-    display: block;
-    padding: 15px;
-    padding-left: 35px;
-    background-color: #d2d2d2;
-    font-size: 24px;
-    font-weight: 500;
-    border-bottom: 2px solid #777777;
-}
-#filmo>ul>li>ul{
-    padding-top: 22px;
-}
-#filmo>ul>li>ul>li{
-    padding-bottom: 22px;
-    padding-left: 35px;
-}
-#filmo>ul>li>ul>li>span{
-    
-    padding-right: 60px;
-} */
 
 /* footer start */
 #footer{
@@ -233,30 +193,17 @@ input[id*="answer"]:checked + label em{
     display: flex;
     padding-top: 60px;
 }
-.footer>img{
-    margin: 10px 45px 10px 45px;
-    
-}
-.line{
-    padding-left: 200px;
-}
+.footer>img{margin: 10px 45px 10px 45px;}
+.line{padding-left: 200px;}
 .line>ul{
     display: flex;
     padding-bottom: 18px;
 }
-.line>p{
-    padding-top: 18px;
-}
+.line>p{padding-top: 18px;}
 .line>ul>li>a{
     padding-right: 5px;
     padding-left: 5px;
 }
-.line>ul>li>a:first-child{
-    padding-left: 0;
-}
-.line>ul>li::after{
-    content: '|';
-}
-.line>ul>li:last-child::after{
-    content: '';
-}
+.line>ul>li>a:first-child{padding-left: 0;}
+.line>ul>li::after{content: '|';}
+.line>ul>li:last-child::after{content: '';}

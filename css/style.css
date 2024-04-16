@@ -1,12 +1,8 @@
-/* @font-face {
-    font-family: 'SUITE-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-} */
+@charset "utf-8";
 body{
     font-family: 'SUITE', sans-serif;
     width: 100%;
+    color: #fff;
 }
 .inner{
     width: 1200px;
@@ -21,9 +17,7 @@ body{
     background-color: rgba(149, 149, 149, 0.95);
     z-index: 50;
 }
-.header{
-    display: flex;
-}
+.header{display: flex;}
 
 /* nav start */
 .logo{
@@ -37,7 +31,6 @@ body{
     position: relative;
     text-align: center;
 }
-
 .nav>ul>li>a{
     display: inline-block;
     padding: 20px;
@@ -46,7 +39,6 @@ body{
     font-weight: 500;
     color: #fff;
     line-height: 2.7;
-    
 }
 .nav>ul>li>a:hover{
     color: #ec2c1d;
@@ -55,62 +47,55 @@ body{
 
 #mv{
     width: 100%;
-    height: auto;
-    /* background-attachment: fixed; */
+    height: 958px;
 }
-#contents{
+.videof{
+    overflow: hidden;
+    min-width: 100%;
+    min-height: 100vh;
+    width: 100%;
+    height: 958px;
+    opacity: 0.92;
+    position: fixed;
+    z-index: -1;
 }
-
-@keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(-1200%); }
-}
-  
 @keyframes rollingleft1 {
     0% { transform: translateX(0); }
     50% { transform: translateX(-100%); }
     50.01% { transform: translateX(100%); }
     100% { transform: translateX(0); }
 }
-
 @keyframes rollingleft2 {
     0% { transition: translateX(0); }
     100% { transform: translateX(-200%); }
 }
 
-.artist{
-    animation: rollingleft1 90s linear infinite;
+.list>ul.original{
+    animation: rollingleft1 220s linear infinite;
 }
-
-.artist.clone {
-    animation: rollingleft2 90s linear infinite;
+.list>ul.clone {
+    animation: rollingleft2 220s linear infinite;
 }
-#artist{
-    height: 108px;
-}
-
-.artist>ul{
-    width: 1200px;
-    overflow: hidden;
+#artist{height: 108px;}
+.list{
+    width: 100%;
     display: flex;
+    overflow: hidden;
+}
+.list>ul{
+    display: flex;
+    width: 2900px;
     padding-top: 27px;
-    /* justify-content: space-between; */
-    
 }
-.artist>ul>li{
-    /* will-change: transform;
-    animation: marquee 10s linear infinite;
-     */
+.list>ul>li{
     padding-right: 81px;
-    width: 2400px;
     box-sizing: border-box; 
-    
 }
-.artist>ul>li:nth-child(4),
-.artist>ul>li:nth-child(6){padding-top: 5px;}
+.list>ul>li:nth-child(4),
+.list>ul>li:nth-child(6){padding-top: 5px;}
 
 #news{height: 536px;}
-
+.cursor{cursor: default;}
 h2{
     font-size: 40px;
     font-weight: 800;
@@ -125,9 +110,7 @@ h3{
     font-size: 24px;
     font-weight: 500;
 }
-#news>.news>h2{
-    padding-top: 97px;
-}
+#news>.news>h2{padding-top: 97px;}
 .con{
     display: flex;
     justify-content: space-between;
@@ -136,19 +119,20 @@ h3{
     width: 590px;height: 310px;
     border: 1px solid ;
     position: relative;
+    background-color: rgba(149, 149, 149, 0.30);
 }
-.box>ul{
+.box>ul, .title>ul{
     width: 500px;
     border-top: 2px solid ;
     padding-top: 20px;
     margin-left: 36px;
     padding-left: 15px;
 }
-.box>ul>li{
+.box>ul>li, .title>ul>li{
     padding-bottom: 20px;
     line-height: 19px;
 }
-.box>ul>li>a{
+.box>ul>li>a, .title>ul>li>a{
     display: block;
     width: 70%;
     overflow: hidden;
@@ -165,56 +149,40 @@ h3{
     float: right;
     margin-right: 41px;
     margin-top: -37px;
-    /* position: absolute;top: 35px;right: 40px; */
 }
-.notice>ul>li>a:hover{
+.notice>ul>li>a:hover,
+.title>ul>li:hover{
     text-decoration: underline;
     font-weight: 800;
 }
-.newrel>ul>li>a:hover{
-    text-decoration: underline;
-    font-weight: 800;
-}
+.on{font-weight: 800; text-decoration: underline;} 
+
 .newrel>.more2{
     font-size: 24px;
     float: left;
-    margin-top: -40px;margin-left: 303px;
+    margin-top: -40px; margin-left: 303px;
 }
-/* .newrel>ul::before{
-    position: absolute;top: 35px;left: 302px;;
-} */
-
-.newrel>ul{
-    width: 266px;
-}
-.newrel>ul>li{
-    padding-bottom: 12px;
-}
-
-.newrel>ul>li>a{
+.newrel>.title>ul{width: 266px;}
+.newrel>.title>ul>li{padding-bottom: 12px;}
+.newrel>.title>ul>li>a{
     width: 90%;
     line-height: 27px;
 }
-.album{
-    float: right;
-    margin-top: -253px;
-    margin-right: 15px;
-}
-.album>ul{position: relative;}
-.album>ul>li{position: absolute;top: 0;left: -242px;}
-.active{
-    font-weight: 700;
-}
+.active{font-weight: 800;}
+
+.album{float: right; margin-top: -253px; margin-right: 258px;}
+.album ul{position: relative;}
+.album ul li{ position: absolute;top: 0;left: 0;}
+
+.album >ul>li {display: none;}
+.album .dia{display: block;}
 
 /* store start */
-#store{
-    height: 510px;
-}
+#store{height: 510px;}
 .store>ul{
     display: flex;
     justify-content: space-between;
 }
-.store>ul>li{}
 .store>ul>li>a>p{
     padding-top: 30px;
     width: 205px;
@@ -231,11 +199,11 @@ h3{
 .store>ul>li>a>img:hover{
     transform: scale(1.1);
 }
+
 /* banner start */
 #banner{
     height: 320px;
     position: relative;
-    
 }
 #banner::after{
     content: '';
@@ -246,12 +214,8 @@ h3{
     opacity: 50%;
     position: absolute;top: 0;left: 0;
 }
-.banner>a>img{
-    position: absolute;top: 0;
-}
-.banner>a>img:nth-child(2){
-    z-index: 50;
-}
+.banner>a>img{position: absolute;top: 0;}
+.banner>a>img:nth-child(2){z-index: 50;}
 #footer{
     height: 200px;
     background-color: #1d1d1d;
@@ -274,30 +238,17 @@ h3{
     display: flex;
     padding-top: 60px;
 }
-.footer>img{
-    margin: 10px 45px 10px 45px;
-    
-}
-.line{
-    padding-left: 200px;
-}
+.footer>img{margin: 10px 45px 10px 45px;}
+.line{padding-left: 200px;}
 .line>ul{
     display: flex;
     padding-bottom: 18px;
 }
-.line>p{
-    padding-top: 18px;
-}
+.line>p{padding-top: 18px;}
 .line>ul>li>a{
     padding-right: 5px;
     padding-left: 5px;
 }
-.line>ul>li>a:first-child{
-    padding-left: 0;
-}
-.line>ul>li::after{
-    content: '|';
-}
-.line>ul>li:last-child::after{
-    content: '';
-}
+.line>ul>li>a:first-child{padding-left: 0;}
+.line>ul>li::after{content: '|';}
+.line>ul>li:last-child::after{content: '';}
